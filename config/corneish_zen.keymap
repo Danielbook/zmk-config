@@ -30,14 +30,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "QWERTYTOCOLEMAK";
             #binding-cells = <0>;
-            bindings = <&mo 3>, <&tog 1>;
+            bindings = <&mo 3>, <&tog 0>;
         };
 
         colemakToQwerty: colemakToQwerty {
             compatible = "zmk,behavior-tap-dance";
             label = "COLEMAKTOQWERTY";
             #binding-cells = <0>;
-            bindings = <&mo 3>, <&tog 0>;
+            bindings = <&mo 3>, <&tog 1>;
         };
     };
 
@@ -45,6 +45,18 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "COLEMAK";
+            bindings = <
+&kp TAB    &kp Q  &kp W  &kp F     &kp P  &kp B                               &kp J        &kp L             &kp U         &kp Y    &kp SEMI  &kp BSPC
+&kp LCTRL  &kp A  &kp R  &kp S     &kp T  &kp G                               &kp M        &kp N             &kp E         &kp I    &kp O     &kp SQT
+&td0       &kp Z  &kp X  &kp C     &kp D  &kp V                               &kp K        &kp H             &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
+                         &kp LGUI  &mo 2  &mt LA(LC(LG(LEFT_SHIFT))) SPACE    &lt 4 ENTER  &colemakToQwerty  &kp LEFT_ALT
+            >;
+
+            label = "COLEMAK";
+        };
+
+        QWERTY {
             display-name = "QWERTY";
 
             // --------------------------------------------------------------------------------
@@ -59,16 +71,8 @@
 &td0       &kp Z  &kp X  &kp C     &kp V  &kp B                               &kp N        &kp M             &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
                          &kp LGUI  &mo 2  &mt LA(LC(LG(LEFT_SHIFT))) SPACE    &lt 4 ENTER  &qwertyToColemak  &kp LEFT_ALT
             >;
-        };
 
-        COLEMAK {
-            display-name = "COLEMAK";
-            bindings = <
-&kp TAB    &kp Q  &kp W  &kp F     &kp P  &kp B                               &kp J        &kp L             &kp U         &kp Y    &kp SEMI  &kp BSPC
-&kp LCTRL  &kp A  &kp R  &kp S     &kp T  &kp G                               &kp M        &kp N             &kp E         &kp I    &kp O     &kp SQT
-&td0       &kp Z  &kp X  &kp C     &kp D  &kp V                               &kp K        &kp H             &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 2  &mt LA(LC(LG(LEFT_SHIFT))) SPACE    &lt 4 ENTER  &colemakToQwerty  &kp LEFT_ALT
-            >;
+            label = "QWERTY";
         };
 
         lower_layer {
