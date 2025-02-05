@@ -85,8 +85,8 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB           &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET       &kp AMPS   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSPC
-&kp LEFT_CONTROL  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp MINUS       &kp EQUAL  &kp SQT       &kp LBKT              &kp RBKT               &kp PRINTSCREEN
+&kp TAB           &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET       &kp AMPS   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DELETE
+&kp LEFT_CONTROL  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp MINUS       &kp EQUAL  &kp SQT       &kp LBKT              &kp RBKT               &kp GRAVE
 &kp LEFT_SHIFT    &kp N6    &kp N7  &kp N8    &kp N9    &kp N0       &kp UNDERSCORE  &kp PLUS   &kp TILDE     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
                                     &trans    &trans    &trans       &kp INS         &kp DEL    &trans
             >;
