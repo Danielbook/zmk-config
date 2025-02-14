@@ -47,10 +47,10 @@
         default_layer {
             display-name = "COLEMAK";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp F     &kp P  &kp B                               &kp J        &kp L      &kp U         &kp Y    &kp SEMI  &kp BSPC
-&kp LCTRL  &kp A  &kp R  &kp S     &kp T  &kp G                               &kp M        &kp N      &kp E         &kp I    &kp O     &kp SQT
-&td0       &kp Z  &kp X  &kp C     &kp D  &kp V                               &kp K        &kp H      &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 2  &mt LA(LC(LG(LEFT_SHIFT))) SPACE    &lt 4 ENTER  &toQwerty  &kp LEFT_ALT
+&kp TAB    &kp Q  &kp W  &kp F     &kp P  &kp B          &kp J                             &kp L      &kp U         &kp Y    &kp SEMI  &kp BSPC
+&kp LCTRL  &kp A  &kp R  &kp S     &kp T  &kp G          &kp M                             &kp N      &kp E         &kp I    &kp O     &kp SQT
+&td0       &kp Z  &kp X  &kp C     &kp D  &kp V          &kp K                             &kp H      &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
+                         &kp LGUI  &mo 2  &lt 4 SPACE    &mt LA(LC(LG(LEFT_SHIFT))) ENTER  &toQwerty  &kp LEFT_ALT
             >;
 
             label = "COLEMAK";
