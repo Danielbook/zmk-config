@@ -7,7 +7,8 @@ An ergonomically optimized ZMK configuration for the Corne v3 keyboard (3x6+3) f
 - **🏠 Home Row Modifiers** - Reduces pinky strain with balanced timing (280ms)
 - **👍 Optimized Thumb Cluster** - Strategic placement for Space, Tab, and Delete
 - **⚡ Smart Combos** - Quick access to Escape and Tab via key combinations
-- **🎯 One-Shot Workspace Switching** - Dedicated Super+number macros for instant workspace access
+- **🇸🇪 Swedish Character Support** - Hold left thumb for å, ä, ö at natural positions
+- **🎯 Numpad Layout** - Proper 3x3 numpad with calculator operators
 - **📱 E-Paper Status Display** - Custom battery, connectivity, and layer indicators
 - **🌈 RGB Underglow** - Full color and effect control
 - **⌨️ Colemak-DH Primary** - Optimized for typing comfort
@@ -37,14 +38,15 @@ This configuration is specifically tuned for development workflows including:
 │SHFT/│  Z  │  X  │  C  │  D  │  V  │   │  K  │  H  │  ,  │  .  │  /  │GUI/ │
 │CAPS │     │     │     │     │     │   │     │     │     │     │     │SPC  │
 └─────┴─────┴─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┴─────┴─────┘
-                  │GUI/ │ SYM │NUM/ │   │NAV/ │ DEL │ ALT │
-                  │ TAB │  ↓  │SPC  │   │ENTR │     │     │
+                  │ SWE │ SYM │GUI/ │   │NAV/ │ DEL │ ALT │
+                  │  ↓  │  ↓  │SPC  │   │ENTR │     │     │
                   └─────┴─────┴─────┘   └─────┴─────┴─────┘
 ```
 
 **Key Improvements:**
 - **Caps Lock**: Tap for Escape (vim!), Hold for Ctrl (terminal!)
-- **Left Thumb**: Tap for Tab, Hold for Super/GUI (window mgmt)
+- **Left Outer Thumb**: Tap for Tab, Hold for Swedish characters (å/ä/ö)
+- **Left Inner Thumb**: Hold for Super/GUI (window management)
 - **Right Thumb**: Delete key for easy access
 - **Bottom Right**: Tap for Space, Hold for Super (alternative Super access)
 
@@ -84,27 +86,49 @@ This configuration is specifically tuned for development workflows including:
 - Arrow keys in vim-style HJKL positions
 - Home/End/PgUp/PgDn for document navigation
 
-### Layer 3: Numbers & Workspace Management
+### Layer 3: Numbers & System
 ```
 ┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬─────┬─────┬─────┐
-│BTCLR│ BT1 │ BT2 │ BT3 │ BT4 │ BT5 │   │ ⊞+1 │ ⊞+2 │ ⊞+3 │ ⊞+4 │ ⊞+5 │PRSCR│
+│BTCLR│ BT1 │ BT2 │ BT3 │ BT4 │ BT5 │   │  +  │  7  │  8  │  9  │  *  │PRSCR│
 ├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
-│     │RGB  │RGB  │RGB  │RGB  │RGB  │   │ ⊞+6 │ ⊞+7 │ ⊞+8 │ ⊞+9 │ ⊞+0 │     │
+│     │RGB  │RGB  │RGB  │RGB  │RGB  │   │  -  │  4  │  5  │  6  │  =  │     │
 │     │ ON  │EFF  │HUE+ │SAT+ │BRI+ │   │     │     │     │     │     │     │
 ├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
-│     │RGB  │RGB  │RGB  │RGB  │RGB  │   │  1  │  2  │  3  │  4  │  5  │     │
+│     │RGB  │RGB  │RGB  │RGB  │RGB  │   │  /  │  1  │  2  │  3  │  .  │     │
 │     │OFF  │EFR  │HUE- │SAT- │BRI- │   │     │     │     │     │     │     │
 └─────┴─────┴─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┴─────┴─────┘
-                  │     │     │ ▼▼▼ │   │     │  6  │  0  │
+                  │     │     │ ▼▼▼ │   │     │  0  │  0  │
                   └─────┴─────┴─────┘   └─────┴─────┴─────┘
 ```
 
-**Major Feature - One-Shot Workspace Switching:**
-- **⊞+1 through ⊞+0** = Super+number macros for instant workspace switching
-- Single keypress to switch workspaces (no holding multiple keys!)
-- Regular numbers (1-6, 0) on bottom rows for typing
-- Bluetooth profile switching (BT1-BT5)
-- Full RGB underglow control
+**Features:**
+- **Numpad layout**: 7/8/9, 4/5/6, 1/2/3, 0 - natural number typing
+- **Calculator operators**: +, -, *, /, =, . for quick calculations
+- **Workspace switching**: Hold Super (middle thumb) + number for `Super+[number]`
+- **Move window**: Hold Super + Shift (home row) + number for `Super+Shift+[number]`
+- **Bluetooth profiles**: Switch between 5 paired devices (BT1-BT5)
+- **RGB underglow control**: Full color and effect customization
+
+### Layer 4: Swedish Characters
+```
+┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬─────┬─────┬─────┐
+│     │     │     │     │     │     │   │     │     │     │     │  å  │     │
+├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
+│     │     │     │     │     │     │   │     │     │     │     │  ö  │  ä  │
+├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
+│     │     │     │     │     │     │   │     │     │     │     │     │     │
+└─────┴─────┴─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┴─────┴─────┘
+                  │ ▼▼▼ │     │     │   │     │     │     │
+                  └─────┴─────┴─────┘   └─────┴─────┴─────┘
+```
+
+**Swedish Character Access:**
+- Hold **left outer thumb** (Tab key) to activate Swedish layer
+- Characters mapped to Swedish keyboard positions:
+  - **`[` position** (right of P) → å
+  - **`;` position** (right of L) → ö
+  - **`'` position** (right of ;) → ä
+- Shift + Swedish layer = Capital letters (Å, Ä, Ö) via home row mods
 
 ## 🏠 Home Row Modifiers
 
