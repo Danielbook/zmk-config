@@ -113,7 +113,7 @@
 &kp TAB           &kp Q                &kp W              &kp F                 &kp P               &kp B          &kp J                             &kp L               &kp U                 &kp Y              &kp SEMI           &ctrl_bspc LCTRL BSPC
 &mt LCTRL ESC     &hml LGUI A          &hml LALT R        &hml LCTRL S          &hml LSHIFT T       &kp G          &kp M                             &hmr RSHIFT N       &hmr RCTRL E          &hmr RALT I        &hmr RGUI O        &kp SQT
 &td0              &kp Z                &kp X              &kp C                 &kp D               &kp V          &kp K                             &kp H               &kp COMMA             &kp DOT            &kp FSLH           &super_space LGUI SPACE
-                                         &kp TAB           &mo 1               &mt LGUI SPACE    &lt 3 ENTER                       &mo 2               &kp RALT
+                                         &kp TAB           &mo 1               &mt LGUI SPACE    &lt 3 ENTER                       &mo 4               &mo 2
             >;
 
             label = "COLEMAK";
@@ -146,13 +146,23 @@
             >;
         };
 
-        keyboard_func {
-            display-name = "numbers/sys";
+        numbers_layer {
+            display-name = "numbers";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &kp PLUS         &kp N7  &kp N8  &kp N9  &kp ASTERISK     &kp PRINTSCREEN
-&none       &rgb_ug RGB_ON   &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI    &kp MINUS        &kp N4  &kp N5  &kp N6  &kp EQUAL        &none
-&none       &rgb_ug RGB_OFF  &rgb_ug RGB_EFR  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD    &kp SLASH        &kp N1  &kp N2  &kp N3  &kp DOT          &trans
-                                              &none            &none            &trans             &trans           &kp N0  &kp N0
+&trans  &trans  &trans  &trans  &trans  &trans    &kp PLUS         &kp N7  &kp N8  &kp N9  &kp ASTERISK     &kp PRINTSCREEN
+&trans  &trans  &trans  &trans  &trans  &trans    &kp MINUS        &kp N4  &kp N5  &kp N6  &kp EQUAL        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp SLASH        &kp N1  &kp N2  &kp N3  &kp DOT          &trans
+                        &trans  &trans  &trans    &trans           &kp N0  &trans
+            >;
+        };
+
+        keyboard_settings {
+            display-name = "keyboard";
+            bindings = <
+&bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &rgb_ug RGB_ON   &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_EFR  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD    &trans  &trans  &trans  &trans  &trans  &trans
+                                              &trans           &trans           &trans             &trans  &trans  &trans
             >;
         };
 
