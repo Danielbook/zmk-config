@@ -83,6 +83,28 @@
         };
     };
 
+    macros {
+        // Swedish character macros for US layout
+        // These use AltGr (Right Alt) combinations
+        se_aa: se_aa {
+            compatible = "zmk,behavior-macro";
+            label = "SE_AA";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp RALT>, <&macro_tap &kp W>, <&macro_release &kp RALT>;
+        };
+        se_ae: se_ae {
+            compatible = "zmk,behavior-macro";
+            label = "SE_AE";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp RALT>, <&macro_tap &kp Q>, <&macro_release &kp RALT>;
+        };
+        se_oe: se_oe {
+            compatible = "zmk,behavior-macro";
+            label = "SE_OE";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp RALT>, <&macro_tap &kp P>, <&macro_release &kp RALT>;
+        };
+    };
 
     combos {
         compatible = "zmk,combos";
@@ -159,9 +181,9 @@
         swedish_layer {
             display-name = "swedish";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp LBKT   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp SEMI   &kp SQT
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &se_aa   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &se_oe   &se_ae
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
