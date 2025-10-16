@@ -83,69 +83,6 @@
         };
     };
 
-    macros {
-        // Macros for Super+number combinations (workspace switching)
-        super_1: super_1 {
-            compatible = "zmk,behavior-macro";
-            label = "SUPER_1";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp N1>, <&macro_release &kp LGUI>;
-        };
-        super_2: super_2 {
-            compatible = "zmk,behavior-macro";
-            label = "SUPER_2";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp N2>, <&macro_release &kp LGUI>;
-        };
-        super_3: super_3 {
-            compatible = "zmk,behavior-macro";
-            label = "SUPER_3";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp N3>, <&macro_release &kp LGUI>;
-        };
-        super_4: super_4 {
-            compatible = "zmk,behavior-macro";
-            label = "SUPER_4";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp N4>, <&macro_release &kp LGUI>;
-        };
-        super_5: super_5 {
-            compatible = "zmk,behavior-macro";
-            label = "SUPER_5";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp N5>, <&macro_release &kp LGUI>;
-        };
-        super_6: super_6 {
-            compatible = "zmk,behavior-macro";
-            label = "SUPER_6";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp N6>, <&macro_release &kp LGUI>;
-        };
-        super_7: super_7 {
-            compatible = "zmk,behavior-macro";
-            label = "SUPER_7";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp N7>, <&macro_release &kp LGUI>;
-        };
-        super_8: super_8 {
-            compatible = "zmk,behavior-macro";
-            label = "SUPER_8";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp N8>, <&macro_release &kp LGUI>;
-        };
-        super_9: super_9 {
-            compatible = "zmk,behavior-macro";
-            label = "SUPER_9";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp N9>, <&macro_release &kp LGUI>;
-        };
-        super_0: super_0 {
-            compatible = "zmk,behavior-macro";
-            label = "SUPER_0";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp N0>, <&macro_release &kp LGUI>;
-        };
-    };
 
     combos {
         compatible = "zmk,combos";
@@ -212,10 +149,10 @@
         keyboard_func {
             display-name = "numbers/sys";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &super_1         &super_2  &super_3  &super_4  &super_5       &kp PRINTSCREEN
-&none       &rgb_ug RGB_ON   &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI    &super_6         &super_7  &super_8  &super_9  &super_0       &none
-&none       &rgb_ug RGB_OFF  &rgb_ug RGB_EFR  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD    &kp N1           &kp N2    &kp N3    &kp N4    &kp N5         &trans
-                                              &none            &none            &trans             &trans           &kp N6    &kp N0
+&bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &kp PLUS         &kp N7  &kp N8  &kp N9  &kp ASTERISK     &kp PRINTSCREEN
+&none       &rgb_ug RGB_ON   &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI    &kp MINUS        &kp N4  &kp N5  &kp N6  &kp EQUAL        &none
+&none       &rgb_ug RGB_OFF  &rgb_ug RGB_EFR  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD    &kp SLASH        &kp N1  &kp N2  &kp N3  &kp DOT          &trans
+                                              &none            &none            &trans             &trans           &kp N0  &kp N0
             >;
         };
     };
