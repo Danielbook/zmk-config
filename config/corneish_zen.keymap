@@ -102,6 +102,31 @@
             bindings = <&kp TAB>;
             layers = <0>;
         };
+
+        // Swedish characters (work with Swedish OS layout)
+        // L+U -> å (sends [ which Swedish layout interprets as å)
+        combo_aa {
+            timeout-ms = <50>;
+            key-positions = <7 8>; // L U
+            bindings = <&kp LBKT>;
+            layers = <0>;
+        };
+
+        // I+O -> ä (sends ' which Swedish layout interprets as ä)
+        combo_ae {
+            timeout-ms = <50>;
+            key-positions = <21 22>; // I O
+            bindings = <&kp SQT>;
+            layers = <0>;
+        };
+
+        // Y+; -> ö (sends ; which Swedish layout interprets as ö)
+        combo_oe {
+            timeout-ms = <50>;
+            key-positions = <9 10>; // Y ;
+            bindings = <&kp SEMI>;
+            layers = <0>;
+        };
     };
 
     keymap {
